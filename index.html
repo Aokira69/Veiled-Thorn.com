@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VEILED THORN — The Dark Forest Beyond the Veil</title>
+    <meta name="description" content="Server Discord bertema Dark Fantasy x Dark Forest x Isekai. Selamat datang di dunia Veiled Thorn.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-deep-night">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <div class="thorn-spinner"></div>
+            <h2 class="loader-title">VEILED THORN</h2>
+            <p class="loader-sub">Opening the Gate Beyond the Veil...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Desktop Only) -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Particle & Fog Background Canvas -->
+    <canvas id="ambient-canvas"></canvas>
+    <div class="fog-overlay"></div>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#gate" class="nav-brand" data-page="page-gate">
+                <span class="brand-icon">🌑</span>
+                <span class="brand-text">VEILED THORN</span>
+            </a>
+            
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="nav-menu" class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#gate" class="nav-link active" data-page="page-gate">GATE</a></li>
+                    <li><a href="#archives" class="nav-link" data-page="page-archives">ARCHIVES</a></li>
+                    <li><a href="#battleground" class="nav-link" data-page="page-battleground">BATTLEGROUND</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN SPA CONTENT WRAPPER -->
+    <main id="app-container">
+
+        <!-- ========================================== -->
+        <!-- PAGE 1 — THE GATE                          -->
+        <!-- ========================================== -->
+        <section id="page-gate" class="page-section active">
+            <div class="gate-wrapper">
+                <div class="moon-background"></div>
+                <div class="forest-silhouettes"></div>
+                <div class="thorn-frame-decor"></div>
+
+                <div class="gate-content glass-card">
+                    <div class="discord-badge-wrapper">
+                        <svg class="discord-svg-logo" viewBox="0 0 127.14 96.36" width="48" height="48" aria-hidden="true">
+                            <path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-20.12-72.13ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.87,53,48.8,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.1,53,91.08,65.69,84.69,65.69Z"/>
+                        </svg>
+                    </div>
+                    <span class="welcome-text">WELCOME TO</span>
+                    <h1 class="main-title">VEILED THORN</h1>
+                    <p class="subtitle">Enter the forest beyond the veil.</p>
+                    
+                    <button id="btn-enter-veil" class="btn-primary glow-effect">
+                        <span class="btn-text">ENTER THE VEIL</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- PAGE 2 — THE VEILED ARCHIVES               -->
+        <!-- ========================================== -->
+        <section id="page-archives" class="page-section">
+            <div class="container">
+                
+                <!-- Section Header -->
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">THE VEILED ARCHIVES</h2>
+                    <p class="section-subtitle">"Every path leads deeper into the Thorn."</p>
+                    <div class="title-divider"><span class="rune-icon">ᚦ</span></div>
+                </div>
+
+                <!-- World Lore Section -->
+                <div class="lore-card glass-card reveal">
+                    <div class="lore-header">
+                        <span class="rune-tag">📜 LORE & MYSTICISM</span>
+                        <h3>WORLD OF VEILED THORN</h3>
+                    </div>
+                    <div class="lore-body">
+                        <p>Veiled Thorn adalah sebuah dunia hutan isekai yang diselimuti kabut dan kegelapan. Di balik pepohonan tua terdapat wilayah yang tidak sepenuhnya tunduk pada dunia manusia. Para penghuni Veiled Thorn hidup di antara cahaya bulan, bayangan, makhluk misterius, dan kekuatan kuno.</p>
+                        <p>Server Discord ini menjadi semacam "gerbang" menuju dunia tersebut. Setiap member dianggap sebagai penghuni atau pengembara yang memasuki hutan melalui sebuah gerbang misterius. Persiapkan dirimu sebelum melangkah lebih jauh ke dalam bayangan.</p>
+                    </div>
+                    <div class="floating-runes-decor">
+                        <span>᚛</span><span>᚜</span><span>ᚠ</span><span>ᚢ</span><span>ᚦ</span>
+                    </div>
+                </div>
+
+                <!-- Discord Channels Architecture -->
+                <div class="archives-section reveal">
+                    <h3 class="subsection-title">FOREST CHANNELS ARCHITECTURE</h3>
+                    
+                    <div class="accordion-container">
+                        
+                        <!-- Archway of Thorn -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">ARCHWAY OF THORN</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">👋🏻</span> ║ welcome</li>
+                                    <li><span class="ch-icon">💫</span> ║ good-bye</li>
+                                    <li><span class="ch-icon">🐺</span> ║ gate-of-thorns</li>
+                                    <li><span class="ch-icon">📰</span> ║ introduction</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Ancient Chronicles -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">ANCIENT CHRONICLES</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">📢</span> ║ announcement</li>
+                                    <li><span class="ch-icon">📌</span> ║ account-official</li>
+                                    <li><span class="ch-icon">⚖️</span> ║ recruitment</li>
+                                    <li><span class="ch-icon">🦅</span> ║ link-mabar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Essence & Rites -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">ESSENCE & RITES</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">🌀</span> ║ role-information</li>
+                                    <li><span class="ch-icon">🌟</span> ║ zodiac-role</li>
+                                    <li><span class="ch-icon">💣</span> ║ game-role</li>
+                                    <li><span class="ch-icon">🍁</span> ║ whisper</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Shadow Grove -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">SHADOW GROVE</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">🐬</span> ║ veron-apps</li>
+                                    <li><span class="ch-icon">💬</span> ║ chatting</li>
+                                    <li><span class="ch-icon">💥</span> ║ apresiasi</li>
+                                    <li><span class="ch-icon">💖</span> ║ curhat</li>
+                                    <li><span class="ch-icon">🗯️</span> ║ spam-bot</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- The Summoning Altar -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">THE SUMMONING ALTAR</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">📋</span> ║ ticket-info</li>
+                                    <li><span class="ch-icon">🧾</span> ║ claim-ticket</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Black Thorn Laws Channel -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">BLACK THORN LAWS</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">📜</span> ║ rules</li>
+                                    <li><span class="ch-icon">📌</span> ║ sanctions</li>
+                                    <li><span class="ch-icon">📋</span> ║ candidate-requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Diplomatic Covens -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">DIPLOMATIC COVENS</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">⚜️</span> ║ alliance</li>
+                                    <li><span class="ch-icon">💬</span> ║ ship-chatting</li>
+                                    <li><span class="ch-icon">🌐</span> ║ inter-server</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Enchanted Beasts -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">ENCHANTED BEASTS</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">😸</span> ║ owo</li>
+                                    <li><span class="ch-icon">😸</span> ║ uwu</li>
+                                    <li><span class="ch-icon">😸</span> ║ god</li>
+                                    <li><span class="ch-icon">💰</span> ║ haruka</li>
+                                    <li><span class="ch-icon">👀</span> ║ anonymous</li>
+                                    <li><span class="ch-icon">🔥</span> ║ streakbot-vt</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- High Council -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">HIGH COUNCIL</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">🔑</span> ║ server-guide</li>
+                                    <li><span class="ch-icon">👑</span> ║ superior</li>
+                                    <li><span class="ch-icon">💬</span> ║ new-hunt</li>
+                                    <li><span class="ch-icon">💬</span> ║ chatting</li>
+                                    <li><span class="ch-icon">🔑</span> ║ tes-bot</li>
+                                    <li><span class="ch-icon">👤</span> ║ shadow</li>
+                                    <li><span class="ch-icon">🔑</span> ║ tes-2</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Mystic Gallery -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">MYSTIC GALLERY</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">📷</span> ║ picture</li>
+                                    <li><span class="ch-icon">🎬</span> ║ video</li>
+                                    <li><span class="ch-icon">🧸</span> ║ face-reveal</li>
+                                    <li><span class="ch-icon">🔔</span> ║ konten</li>
+                                    <li><span class="ch-icon">🌧️</span> ║ random</li>
+                                    <li><span class="ch-icon">📦</span> ║ fiksi-lovers</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Battlegrounds -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">BATTLEGROUNDS</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">🧊</span> ║ profile-roblox</li>
+                                    <li><span class="ch-icon">🎮</span> ║ mobile-legend</li>
+                                    <li><span class="ch-icon">🎮</span> ║ free-fire</li>
+                                    <li><span class="ch-icon">🎮</span> ║ minecraft</li>
+                                    <li><span class="ch-icon">🎮</span> ║ other-game</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Whispering Canopy -->
+                        <div class="accordion-item glass-card">
+                            <button class="accordion-header">
+                                <span class="acc-title">WHISPERING CANOPY</span>
+                                <span class="acc-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="channel-list">
+                                    <li><span class="ch-icon">⚜️</span> ║ push voice V.T</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Black Thorn Laws Section -->
+                <div class="rules-section reveal">
+                    <div class="section-header text-center">
+                        <h3 class="subsection-title">BLACK THORN LAWS</h3>
+                        <p class="section-subtitle">"Every thorn has its law."</p>
+                    </div>
+
+                    <div class="rules-grid">
+                        <div class="rule-card glass-card"><span class="rule-num">01</span><p class="rule-text">Hormati seluruh member tanpa membedakan role.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">02</span><p class="rule-text">Dilarang melakukan harassment atau bullying.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">03</span><p class="rule-text">Dilarang melakukan spam berlebihan di channel umum.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">04</span><p class="rule-text">Gunakan channel sesuai fungsi masing-masing.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">05</span><p class="rule-text">Dilarang mengirim konten ilegal atau berbahaya.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">06</span><p class="rule-text">Dilarang melakukan scam atau penipuan.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">07</span><p class="rule-text">Dilarang menyebarkan data pribadi orang lain.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">08</span><p class="rule-text">Dilarang melakukan impersonation terhadap member/staff.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">09</span><p class="rule-text">Jangan melakukan raid atau mengganggu server lain.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">10</span><p class="rule-text">Jangan melakukan ping massal tanpa alasan yang jelas.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">11</span><p class="rule-text">Dilarang menggunakan bot secara berlebihan untuk mengganggu member.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">12</span><p class="rule-text">Gunakan bahasa yang sopan dan tidak provokatif.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">13</span><p class="rule-text">Konflik pribadi diselesaikan melalui jalur yang tepat.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">14</span><p class="rule-text">Hormati keputusan moderator selama proses moderasi.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">15</span><p class="rule-text">Jangan menyalahgunakan permission atau bug Discord.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">16</span><p class="rule-text">Dilarang mengirim link mencurigakan.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">17</span><p class="rule-text">Promosi hanya diperbolehkan pada tempat yang telah ditentukan.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">18</span><p class="rule-text">Gunakan voice channel secara bertanggung jawab.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">19</span><p class="rule-text">Ikuti aturan tambahan dari event atau kegiatan server.</p></div>
+                        <div class="rule-card glass-card"><span class="rule-num">20</span><p class="rule-text">Staff berhak mengambil tindakan terhadap tindakan yang merusak keamanan dan kenyamanan server.</p></div>
+                    </div>
+                </div>
+
+                <!-- Server Creator / Keepers Section -->
+                <div class="keepers-section reveal">
+                    <div class="section-header text-center">
+                        <h3 class="subsection-title">THE KEEPERS OF THE THORN</h3>
+                    </div>
+
+                    <div class="keepers-grid">
+                        
+                        <!-- Owner Card -->
+                        <div class="profile-card glass-card glow-border">
+                            <div class="avatar-wrapper">
+                                <img src="https://i.imgur.com/LNnqJ11.jpeg" alt="OWNER" class="profile-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'><rect width=\'120\' height=\'120\' fill=\'%231a092b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23a855f7\' font-size=\'16\' font-weight=\'bold\'>OWNER</text></svg>';">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="profile-info">
+                                <span class="role-badge owner-badge">OWNER</span>
+                                <h4 class="profile-title">Ruler of the Veil</h4>
+                            </div>
+                        </div>
+
+                        <!-- Admin 1 Card -->
+                        <div class="profile-card glass-card glow-border">
+                            <div class="avatar-wrapper">
+                                <img src="https://i.imgur.com/7equKGK.jpeg" alt="ADMIN 1" class="profile-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'><rect width=\'120\' height=\'120\' fill=\'%231a092b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23c084fc\' font-size=\'16\' font-weight=\'bold\'>ADMIN 1</text></svg>';">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="profile-info">
+                                <span class="role-badge admin-badge">ADMIN 1</span>
+                                <h4 class="profile-title">High Warden</h4>
+                            </div>
+                        </div>
+
+                        <!-- Admin 2 Card -->
+                        <div class="profile-card glass-card glow-border">
+                            <div class="avatar-wrapper">
+                                <img src="https://i.imgur.com/ULgd2cH.jpeg" alt="ADMIN 2" class="profile-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'><rect width=\'120\' height=\'120\' fill=\'%231a092b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23c084fc\' font-size=\'16\' font-weight=\'bold\'>ADMIN 2</text></svg>';">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="profile-info">
+                                <span class="role-badge admin-badge">ADMIN 2</span>
+                                <h4 class="profile-title">Shadow Warden</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Join Section -->
+                <div class="join-section reveal">
+                    <div class="join-card glass-card text-center">
+                        <h2 class="section-title">JOIN THE VEIL</h2>
+                        <p class="section-subtitle">"The gate is open. Will you enter?"</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-frame">
+                                <img src="https://i.imgur.com/YxZH0Vq.jpeg" alt="Discord QR Code" class="qr-image" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\' viewBox=\'0 0 180 180\'><rect width=\'180\' height=\'180\' fill=\'%230f051d\' stroke=\'%23a855f7\' stroke-width=\'2\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23e9d5ff\' font-size=\'14\'>QR GATEWAY</text></svg>';">
+                                <div class="qr-corner top-left"></div>
+                                <div class="qr-corner top-right"></div>
+                                <div class="qr-corner bottom-left"></div>
+                                <div class="qr-corner bottom-right"></div>
+                            </div>
+                            <p class="scan-text">SCAN THE GATE</p>
+                        </div>
+
+                        <a href="https://discord.gg/GJRDAA8Mn" target="_blank" rel="noopener noreferrer" class="btn-primary glow-effect btn-join">
+                            <span>JOIN DISCORD</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- PAGE 3 — THE BATTLEGROUND                  -->
+        <!-- ========================================== -->
+        <section id="page-battleground" class="page-section">
+            <div class="container">
+                
+                <!-- Section Header -->
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">THE BATTLEGROUND</h2>
+                    <p class="section-subtitle">"Survive the road beyond the veil."</p>
+                </div>
+
+                <!-- Control Bar & Settings Dashboard -->
+                <div class="dashboard-panel glass-card reveal">
+                    <!-- Real Time Clock Container -->
+                    <div class="clock-box">
+                        <span id="clock-time" class="clock-time">00:00:00</span>
+                        <div class="clock-details">
+                            <span id="clock-date">1 Jan 2026</span> • <span id="clock-day">Senin</span> • <span class="tz-tag">WIB</span>
+                        </div>
+                    </div>
+
+                    <!-- Environment & Audio Quick Toggles -->
+                    <div class="quick-controls">
+                        <button id="btn-toggle-mode" class="btn-icon-text glass-card" title="Change Visual Mode">
+                            <span class="icon">🌙</span> <span id="mode-text">Deep Night</span>
+                        </button>
+                        <button id="btn-toggle-weather" class="btn-icon-text glass-card" title="Change Weather">
+                            <span class="icon">🌧️</span> <span id="weather-text">Fog</span>
+                        </button>
+                        <button id="btn-toggle-ambience" class="btn-icon-text glass-card" title="Toggle Ambience">
+                            <span class="icon">🔊</span> <span id="ambience-text">Ambience: OFF</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mini Game Section -->
+                <div class="game-wrapper glass-card reveal">
+                    <div class="game-header">
+                        <div class="score-board">
+                            <div class="score-item">
+                                <span class="label">SCORE</span>
+                                <span id="game-score" class="value">0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="label">HIGH SCORE</span>
+                                <span id="game-highscore" class="value">0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="label">DISTANCE</span>
+                                <span id="game-distance" class="value">0m</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="label">SPEED</span>
+                                <span id="game-speed" class="value">1x</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Game Viewport -->
+                    <div class="canvas-container">
+                        <canvas id="game-canvas" width="400" height="600"></canvas>
+                        
+                        <!-- Overlay Start/Pause/Game Over Screen -->
+                        <div id="game-overlay" class="game-overlay active">
+                            <div class="overlay-card text-center">
+                                <h3 id="overlay-title">THORN RUNNER</h3>
+                                <p id="overlay-subtitle">Gunakan tombol atau swipe untuk menghindari rintangan!</p>
+                                <button id="btn-game-start" class="btn-primary glow-effect">START RUN</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Touch Controls -->
+                    <div class="mobile-controls">
+                        <button id="btn-ctrl-left" class="btn-ctrl">◀ LEFT</button>
+                        <button id="btn-ctrl-action" class="btn-ctrl btn-ctrl-center">BRAKE / BOOST</button>
+                        <button id="btn-ctrl-right" class="btn-ctrl">RIGHT ▶</button>
+                    </div>
+                </div>
+
+                <!-- 7 Features Hub Grid -->
+                <div class="features-grid">
+                    
+                    <!-- Player Profile -->
+                    <div class="feature-card glass-card reveal">
+                        <h4>👤 PLAYER PROFILE</h4>
+                        <div class="profile-stats">
+                            <p>Name: <span id="player-name" class="highlight">Wanderer</span></p>
+                            <p>Level: <span id="player-level" class="highlight">1</span></p>
+                            <div class="xp-bar-container">
+                                <div id="xp-bar-fill" class="xp-bar-fill" style="width: 0%;"></div>
+                            </div>
+                            <p class="xp-text"><span id="player-xp">0</span> / <span id="player-next-xp">100</span> XP</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="feature-card glass-card reveal">
+                        <h4>🏆 ACHIEVEMENTS</h4>
+                        <ul id="achievement-list" class="badge-list">
+                            <li class="badge-item locked" data-ach="first">First Journey</li>
+                            <li class="badge-item locked" data-ach="runner">Thorn Runner</li>
+                            <li class="badge-item locked" data-ach="driver">Shadow Driver</li>
+                            <li class="badge-item locked" data-ach="survivor">Forest Survivor</li>
+                            <li class="badge-item locked" data-ach="eternal">Eternal Wanderer</li>
+                        </ul>
+                    </div>
+
+                    <!-- Daily Quests -->
+                    <div class="feature-card glass-card reveal">
+                        <h4>📜 DAILY QUESTS</h4>
+                        <ul id="daily-quest-list" class="quest-list">
+                            <li><span class="quest-desc">Survive 1000m</span> <span id="quest-1-status" class="quest-tag">0/1000m</span></li>
+                            <li><span class="quest-desc">Score 500 points</span> <span id="quest-2-status" class="quest-tag">0/500</span></li>
+                            <li><span class="quest-desc">Dodge 20 obstacles</span> <span id="quest-3-status" class="quest-tag">0/20</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Local Leaderboard -->
+                    <div class="feature-card glass-card reveal">
+                        <h4>🥇 LOCAL LEADERBOARD</h4>
+                        <ol id="leaderboard-list" class="leaderboard-list">
+                            <li><span class="rank">#1</span> <span class="name">-</span> <span class="score">0</span></li>
+                            <li><span class="rank">#2</span> <span class="name">-</span> <span class="score">0</span></li>
+                            <li><span class="rank">#3</span> <span class="name">-</span> <span class="score">0</span></li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="copyright">© 2026 VEILED THORN. All Rights Reserved.</p>
+            <p class="developer-credit">Developed by <span class="dev-name">aokira</span></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="btn-back-to-top" class="btn-back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript Script Link -->
+    <script src="script.js"></script>
+</body>
+</html>
